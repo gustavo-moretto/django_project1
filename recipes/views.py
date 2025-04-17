@@ -4,7 +4,9 @@ from django.http import HttpResponse
 def home(request):
     # django takes the views from template folder
     # you don't need specify the path
-    return render(request, 'recipes/home.html') 
+    return render(request, 'recipes/home.html', context={
+        'name': 'Gustavo',        
+    }) 
 
 def contato(request):
     return render(request, 'index.html')
